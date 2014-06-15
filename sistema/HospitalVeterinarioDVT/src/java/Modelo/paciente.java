@@ -9,6 +9,7 @@ public class paciente {
     private String raza;
     private int edad;
     private String color;
+    private String sexo;
 
     public String getCodigo() {
         return codigo;
@@ -26,9 +27,6 @@ public class paciente {
         this.propietario = Propietario;
     }
 
-    /**
-     * @return the nombre
-     */
     public String getNombre() {
         return nombre;
     }
@@ -68,4 +66,12 @@ public class paciente {
     public void setColor(String color) {
         this.color = color;
     }  
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

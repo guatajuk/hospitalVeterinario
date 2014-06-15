@@ -19,7 +19,7 @@ public class DAOpropietario extends propietario {
     }
 
     public boolean modificar() {
-        String sql = "UPDATE propietario SET  nombre ='"+getNombre()+"'dni = '"+getDni()+"' telefono='"+getTelefono()+"'apellido='"+getDireccion()+"' where codigo = '"+getCodigo()+"'";
+        String sql = "UPDATE propietario SET  nombre = '"+getNombre()+"' dni = '"+getDni()+"' telefono='"+getTelefono()+"'apellido='"+getDireccion()+"' where codigo = '"+getCodigo()+"'";
         if (c.actualizar(sql) == 1) {
             return true;
         }
@@ -30,7 +30,7 @@ public class DAOpropietario extends propietario {
         return false;
     }
     
-    public boolean verifica() {
+    public boolean verificar() {
         String sql = "SELECT * From propietario where dni=" + getDni() + "";
         if (c.verificar(sql) == 1) {
             return true;

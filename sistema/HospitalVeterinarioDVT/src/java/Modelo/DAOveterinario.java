@@ -30,7 +30,7 @@ public class DAOveterinario extends veterinario {
         return false;
     }
     
-    public boolean verifica() {
+    public boolean verificar() {
         String sql = "SELECT * FROM propietario WHERE codigo = "+getCodigo()+"";
         if (c.verificar(sql) == 1) {
             return true;
