@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+     Document   : menu
+     Created on : 
+     Author     : jenny
+-->
+<html lang="en">
+    
+<head>
+  <meta charset="utf-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+  <style>
+  .ui-menu { width: 150px; }
+  </style>
+</head>
+<body>
+ 
+<ul id="menu">
+  
+  <li>
+    <a href="#">Propietarios</a>
+    <ul>
+      <li><a href="Vista/Propietario/frmInsertarPropietario.jsp">Insertar</a></li>
+      <li><a href="Vista/Propietario/frmConsultarPropietario.jsp">Consultar</a></li>
+      <li><a href="Vista/Propietario/frmModificarPropietario.jsp">Modificar</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#">Pacientes</a>
+    <ul>
+       <li><a href="Vista/Paciente/frmInsertarPaciente.jsp">Insertar</a></li>
+      <li><a href="Vista/Paciente/frmConsultarPaciente.jsp">Consultar</a></li>
+      <li><a href="Vista/Paciente/frmModificarPaciente.jsp">Modificar</a></li>
+    </ul>
+  </li>
+  
+  
+</ul>
+ 
+ 
+</body>
+</html>
