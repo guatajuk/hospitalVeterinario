@@ -6,14 +6,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="InsertarPropietario.jsp">
-            <label>Cedula:</label><br><input type="text" name="codigo"><br>
-            <label>Nombre:</label><br><input type="text" name="nombre"><br>
-            <label>Direccion:</label><br><input type="text" name="especie"><br>
-            <label>Teléfono:</label><br><input type="text" name="raza"><br>
+        <form  action="InsertarPropietario.jsp">
+            
+            <label>Nombre:</label><br><input type="text" required name="nombre"><br>
+            <label>Dni:</label><br><input type="text" required name="dni"><br>
+            <label>Teléfono:</label><br><input type="text"   required name="telefono"><br>
+             <label>Direccion:</label><br><input type="text"  required name="direccion"><br>
 
-
-            <input class="btn btn-1" type="submit" value="Ingresar">
+             <input class="" type="submit"  value="Insertar" >
+        
         </form>
+       
     </body>
 </html>
