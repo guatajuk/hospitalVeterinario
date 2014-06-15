@@ -2,6 +2,7 @@ package Modelo;
 
 public class propietario {
     
+    private String codigo;
     private String dni;
     private String nombre;
     private String telefono;
@@ -37,5 +38,13 @@ public class propietario {
     
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 }
