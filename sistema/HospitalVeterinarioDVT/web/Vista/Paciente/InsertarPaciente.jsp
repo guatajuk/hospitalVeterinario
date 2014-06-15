@@ -1,4 +1,4 @@
-<%@page import="Modelo.DAOpaciente"%>    
+<%@page import="Modelo.DAOpaciente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
@@ -9,7 +9,8 @@
     paciente.setEspecie(request.getParameter("especie"));
     paciente.setColor(request.getParameter("color"));
     paciente.setEdad(Integer.valueOf(request.getParameter("edad")));
-    if (paciente.insertar()) {
+    if (!paciente.verificar()) {
+        paciente.insertar();
 %>
         <script>
             alert("Paciente insertado correctamente");
