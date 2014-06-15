@@ -1,9 +1,3 @@
-<%-- 
-    Document   : frmConsultarPropietario
-    Created on : 
-    Author     : Jenny
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

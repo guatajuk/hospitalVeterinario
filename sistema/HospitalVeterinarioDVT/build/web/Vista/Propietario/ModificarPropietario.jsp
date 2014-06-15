@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ModificarPropietario
-    Created on : 14/06/2014, 02:37:58 PM
-    Author     : cabletronik
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

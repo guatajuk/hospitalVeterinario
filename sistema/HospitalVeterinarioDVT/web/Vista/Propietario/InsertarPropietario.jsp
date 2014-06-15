@@ -1,9 +1,3 @@
-<%-- 
-    Document   : InsertarPropietario
-    Created on : 
-    Author     : Jenny
---%>
-
 <%@page import="modelo.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
