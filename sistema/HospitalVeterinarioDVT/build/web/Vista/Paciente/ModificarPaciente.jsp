@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <%
     Modelo.DAOpaciente paciente = new DAOpaciente();
+    paciente.setPropietario(request.getParameter("codigo"));
     paciente.setPropietario(request.getParameter("propietario"));
     paciente.setNombre(request.getParameter("nombre"));
     paciente.setRaza(request.getParameter("raza"));
