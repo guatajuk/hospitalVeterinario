@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Conexion {
     
@@ -103,7 +105,7 @@ public class Conexion {
             st.close();
             return 1;
         } catch (SQLException e) {
-            System.out.println(e);
+            System.out.println("exxxxxxxxxxxecptioooooooooooooooooooooooooooon"+e);
         }
         return -1;
     }
@@ -144,7 +146,7 @@ public class Conexion {
         }
         return sb;
     }
-    
+ 
     
     public boolean ejecutar(String SQL) throws SQLException{
         st = con.createStatement();
@@ -173,6 +175,9 @@ public class Conexion {
         // Solicitar al motor que ejecute el SQL
         return st.executeQuery(SQL); //ejecuta el query y retorna un resultset
     }
+    
+    
+    
    
     
 }

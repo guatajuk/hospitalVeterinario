@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form  action="InsertarPropietario.jsp">
+        <form  action=InsertarPropietario.jsp>
             
             <label>Nombre:</label><br><input type="text" required name="nombre"><br>
             <label>Dni:</label><br><input type="text" required name="dni"><br>
@@ -16,6 +16,7 @@
              <input class="" type="submit"  value="Insertar" >
         
         </form>
+        <div><a href="../../menu.html">Volver al Menu</a></div>
        
     </body>
 </html>
