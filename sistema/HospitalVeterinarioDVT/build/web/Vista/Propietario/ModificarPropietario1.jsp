@@ -3,8 +3,10 @@
     Created on : 
     Author     : Jenny
 --%>
-<%@page import="Modelo.DAOpropietario"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+      <%@page import="Modelo.DAOpropietario"%>
+      <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
         <%
            Modelo.DAOpropietario propietario=new DAOpropietario();
@@ -17,18 +19,18 @@
            if(!propietario.getDni().equals("")&&! propietario.getDireccion().equals("")&&!propietario.getNombre().equals("")&&!propietario.getTelefono().equals("")){
            
            
-            if (propietario.insertar()) {
+            if (propietario.modificar()) {
         %>
         <script>
-            alert("Propietario insertado correctamente");
-            var pag="frmInsertarPropietario.jsp";
+            alert("Propietario Modificado correctamente");
+            var pag="frmModificarPropietario.jsp";
             window.location=pag;
         </script>
         <%            } else {
         %>
         <script>
-            alert("No se insertó");
-            window.location="frmInsertarPropietario.jsp";
+            alert("No se Modificó");
+            window.location="frmModificarPropietario.jsp";
         </script>
         <%                }}
            else
@@ -36,8 +38,11 @@
            %>
         <script>
             alert("Debe diligenciar todos los campos");
-            window.location="frmInsertarPropietario.jsp";
+            window.location="frmModificarPropietario.jsp";
         </script>
         <%    
            }
         %>
+
+    </body>
+</html>

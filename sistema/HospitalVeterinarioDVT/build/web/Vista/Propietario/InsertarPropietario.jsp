@@ -1,3 +1,8 @@
+<%-- 
+    Document   : ModificarPropietario1
+    Created on : 
+    Author     : Jenny
+--%>
 <%@page import="Modelo.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 

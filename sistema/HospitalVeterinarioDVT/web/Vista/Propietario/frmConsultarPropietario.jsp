@@ -6,6 +6,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form  action="ConsultarPropietario.jsp">
+        <label>Dni:</label><br><input type="text" required name="dni"><br>
+        <input class="" type="submit"  value="Consultar" >
+          </form>
+       <div><a href="../../menu.html">Volver al Menu</a></div>
     </body>
 </html>
