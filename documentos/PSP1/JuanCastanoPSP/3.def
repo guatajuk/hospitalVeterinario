@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<defectLog>
+  <defect num="1" type="Environment" inj="Design" rem="Code" ft="2.0" fd="1" desc="Se debe cargar el driver (jdbc) para la conexión a la base de datos con Java" date="@1402713062535" />
+</defectLog>

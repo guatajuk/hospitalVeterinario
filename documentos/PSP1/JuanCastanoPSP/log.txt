@@ -1,0 +1,8 @@
+Process Dashboard - logging started at Mon Jun 16 21:37:25 COT 2014
+Oracle Corporation JRE 1.8.0_05; Linux
+Using LocalWorkingDirectory[/home/juan/.pspdata]
+Jun 16, 2014 9:37:27 PM net.sourceforge.processdash.ProcessDashboard <init>
+INFO: Process Dashboard version 2.0
+Saved /home/juan/.pspdata/global.dat
+Saved /home/juan/.pspdata/3.dat
+Saved /home/juan/.pspdata/3.dat

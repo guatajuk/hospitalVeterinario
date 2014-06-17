@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<timeLogEntries>
+  <time id="1" path="/ProjectPSP1/PSP1/Planning" start="@1402900147643" delta="4" />
+  <time id="2" path="/HistorialVeterinario/PSP1/Planning" start="@1402413052000" delta="41" interrupt="8" />
+  <time id="3" path="/HistorialVeterinario/PSP1/Design" start="@1402503625000" delta="20" />
+  <time id="4" path="/HistorialVeterinario/PSP1/Design" start="@1402500129000" delta="21" interrupt="17" />
+  <time id="5" path="/HistorialVeterinario/PSP1/Design" start="@1402502410000" delta="24" interrupt="6" />
+  <time id="20" path="/HistorialVeterinario/PSP1/Code" start="@1402821326000" delta="47" interrupt="8" />
+</timeLogEntries>

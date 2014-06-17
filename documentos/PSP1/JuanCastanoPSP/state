@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- hierarchical work breakdown structure -->
+
+<node name="top">
+  <node name="HistorialVeterinario" selected="true">
+    <node name="PSP1" templateID="PSP1" dataFile="3.dat" defectLog="3.def" selected="true">
+      <node name="Planning" selected="true"/>
+      <node name="Design"/>
+      <node name="Code"/>
+      <node name="Compile"/>
+      <node name="Test"/>
+      <node name="Postmortem"/>
+    </node>
+  </node>
+</node>

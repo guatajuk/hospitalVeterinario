@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<timeLogEntries>
+  <time id="1" path="/ProjectPSP1/PSP1/Planning" start="@1402900147643" delta="4" />
+  <time id="2" path="/HistorialVeterinario/PSP1/Planning" start="@1402420252000" delta="39" interrupt="8" />
+  <time id="3" path="/HistorialVeterinario/PSP1/Design" start="@1402503625000" delta="20" />
+  <time id="4" path="/HistorialVeterinario/PSP1/Design" start="@1402500129000" delta="21" interrupt="17" />
+  <time id="5" path="/HistorialVeterinario/PSP1/Design" start="@1402502410000" delta="24" interrupt="6" />
+  <time id="15" path="/HistorialVeterinario/PSP1/Code" start="@1402684277000" delta="46" interrupt="19" />
+  <time id="16" path="/HistorialVeterinario/PSP1/Code" start="@1402688123000" delta="27" interrupt="5" />
+  <time id="17" path="/HistorialVeterinario/PSP1/Code" start="@1402687307000" delta="15" interrupt="3" />
+  <time id="18" path="/HistorialVeterinario/PSP1/Code" start="@1402688349000" delta="8" interrupt="10" />
+  <time id="19" path="/HistorialVeterinario/PSP1/Code" start="@1402689431000" delta="30" />
+  <time id="20" path="/HistorialVeterinario/PSP1/Code" start="@1402648526000" delta="47" interrupt="8" />
+  <time id="21" path="/HistorialVeterinario/PSP1/Code" start="@1402694829000" delta="60" interrupt="15" />
+  <time id="22" path="/HistorialVeterinario/PSP1/Code" start="@1402932971000" delta="71" interrupt="12" />
+  <time id="23" path="/HistorialVeterinario/PSP1/Code" start="@1402934351000" delta="71" interrupt="20" />
+  <time id="24" path="/HistorialVeterinario/PSP1/Code" start="@1402937231000" delta="32" />
+</timeLogEntries>

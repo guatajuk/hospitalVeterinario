@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<defectLog>
+  <defect num="1" type="System" inj="Design" rem="Code" ft="1.9" fd="" desc="Los datos del archivo estaban dispuestos de forma erronea, deben ingresarse como una fila, es decir, una columna de la tabla, es una fila del archivo" date="@1402900464439" />
+</defectLog>
