@@ -46,7 +46,7 @@ DROP TABLE Propietario;
 
 /*	TABLA PROPIETARIO 	*/
 
-CREATE OR REPLACE TABLE Propietario(
+CREATE TABLE IF NOT EXIST Propietario(
 	codigo				SERIAL,
 	nombre				VARCHAR(50),
 	dni				VARCHAR(12) UNIQUE,
@@ -58,7 +58,7 @@ ALTER TABLE Propietario ADD PRIMARY KEY (codigo);
 
 /*	TABLA ESPECIE		*/
 
-CREATE OR REPLACE TABLE Especie(
+CREATE TABLE IF NOT EXIST Especie(
 	codigo				SERIAL,
 	nombre				VARCHAR(50),
 	descripcion			TEXT
@@ -69,7 +69,7 @@ ALTER TABLE Especie ADD PRIMARY KEY (codigo);
 
 /*	TABLA RAZA 		*/
 
-CREATE OR REPLACE TABLE Raza(
+CREATE TABLE IF NOT EXIST Raza(
 	codigo				SERIAL,
 	nombre 				VARCHAR(50),
 	descripcion			TEXT
@@ -80,7 +80,7 @@ ALTER TABLE Raza ADD PRIMARY KEY (codigo);
 
 /* 	TABLA PACIENTE 		*/
 
-CREATE OR REPLACE TABLE Paciente(
+CREATE TABLE IF NOT EXIST Paciente(
 	codigo				SERIAL,
 	nombre				VARCHAR(50),
 	especie				INT,
@@ -99,7 +99,7 @@ ALTER TABLE Paciente ADD PRIMARY KEY (codigo),
 
 /* 	TABLA  TIPO DIETA 	*/
 
-CREATE OR REPLACE TABLE TipoDieta(
+CREATE TABLE IF NOT EXIST TipoDieta(
 	codigo			SERIAL,
 	descripcion		TEXT
 );
@@ -109,7 +109,7 @@ ALTER TABLE TipoDieta ADD PRIMARY KEY (codigo);
 
 /* 	TABLA TIPO VACUNA 	*/
 
-CREATE OR REPLACE TABLE TipoVacuna(
+CREATE TABLE IF NOT EXIST TipoVacuna(
 	codigo 			SERIAL,
 	descripcion		TEXT
 );
@@ -119,7 +119,7 @@ ALTER TABLE TipoVacuna ADD PRIMARY KEY (codigo);
 
 /* 	TABLA HISTORIAL VACUNA 	*/
 
-CREATE OR REPLACE TABLE HistorialVacunas(
+CREATE TABLE IF NOT EXIST HistorialVacunas(
 	codigo					SERIAL,
 	codigoPaciente			INT,
 	fecha					DATE,
@@ -132,7 +132,7 @@ ALTER TABLE HistorialVacunas ADD FOREIGN KEY (codigoPaciente) REFERENCES Pacient
 
 /* 	TABLA VETERINARIO 	*/
 
-CREATE OR REPLACE TABLE Veterinario(
+CREATE TABLE IF NOT EXIST Veterinario(
 	codigo					SERIAL,
 	cedula					VARCHAR(12),
 	nombre					VARCHAR(50),
@@ -144,7 +144,7 @@ ALTER TABLE Veterinario ADD PRIMARY KEY (codigo);
 
 /* 	TABLA HISTORIAL MEDICO 	*/
 
-CREATE OR REPLACE TABLE HistorialMedico(
+CREATE TABLE IF NOT EXIST HistorialMedico(
 	codigo								SERIAL,
 	codigoPaciente						INT,
 	codigoVeterinario					INT,
