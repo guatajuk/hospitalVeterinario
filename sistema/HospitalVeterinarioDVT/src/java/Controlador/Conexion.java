@@ -103,7 +103,7 @@ public class Conexion {
             st.close();
             return 1;
         } catch (SQLException e) {
-            System.out.println("exxxxxxxxxxxecptioooooooooooooooooooooooooooon"+e);
+            System.out.println("exception"+e);
         }
         return -1;
     }
@@ -172,10 +172,5 @@ public class Conexion {
         
         // Solicitar al motor que ejecute el SQL
         return st.executeQuery(SQL); //ejecuta el query y retorna un resultset
-    }
-    
-    
-    
-   
-    
+    } 
 }

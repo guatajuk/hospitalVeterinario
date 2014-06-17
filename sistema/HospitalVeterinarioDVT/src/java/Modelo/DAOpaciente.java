@@ -7,7 +7,7 @@ public class DAOpaciente extends paciente {
     Controlador.Conexion c = new Conexion();
 
     public boolean insertar(){
-        String SQL = "INSERT  INTO paciente (propietario, nombre, especie, raza, edad, color, sexo) VALUES ('"+getPropietario()+"', '"+getNombre()+"', '"+getEspecie()+"', '"+getRaza()+"', '"+getEdad()+"', '"+getColor()+"', '"+getSexo()+"')";
+        String SQL = "INSERT INTO paciente (dni, nombre, especie, raza, edad, sexo, color) VALUES ('"+getPropietario()+"', '"+getNombre()+"', '"+getEspecie()+"', '"+getRaza()+"', '"+getEdad()+"', '"+getSexo()+"', '"+getColor()+"')";
         try{
             c.procesarSQL(SQL);
             return true;
@@ -18,7 +18,7 @@ public class DAOpaciente extends paciente {
     }
 
     public boolean modificar() {
-        String sql = "UPDATE paciente SET  propietario ='"+getPropietario()+" 'nombre = '"+getNombre()+"' especie = '"+getEspecie()+"' raza = '"+getRaza()+"' edad = '"+getEdad()+"' color = '"+getColor()+"' sexo = '"+getSexo()+"'  where codigo = '"+getCodigo()+"'";
+        String sql = "UPDATE paciente SET  propietario ='"+getPropietario()+"', nombre = '"+getNombre()+"', especie = '"+getEspecie()+"', raza = '"+getRaza()+"', edad = '"+getEdad()+"', color = '"+getColor()+"', sexo = '"+getSexo()+"'  where codigo = '"+getCodigo()+"'";
         if (c.actualizar(sql) == 1) {
             return true;
         }

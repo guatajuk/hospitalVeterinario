@@ -7,12 +7,12 @@
     </head>
     <body>
         <form action="InsertarPaciente.jsp">
-            <label>Codigo:</label> <br><input type="text" name="codigo"><br>
-            <label>Propietario:</label><br><input type="text" name="propietario"><br>
+            <label>Propietario:</label><br><input type="text" name="dni"><br>
             <label>Nombre:</label><br><input type="text" name="nombre"><br>
             <label>Especie:</label><br><input type="text" name="especie"><br>
             <label>Raza:</label><br><input type="text" name="raza"><br>
             <label>Edad:</label><br><input   type="number" name="edad"><br>
+            <label>Sexo:</label><br><input   type="text" name="sexo"><br>
             <label>Color:</label><br><input type="text" name="color"><br>
             <input type="hidden"  name="operacion" value="insertar">
             <input class="btn btn-1" type="submit" value="Insertar">

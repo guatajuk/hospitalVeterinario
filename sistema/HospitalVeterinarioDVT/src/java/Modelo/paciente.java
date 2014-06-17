@@ -7,7 +7,7 @@ public class paciente {
     private String nombre;
     private String especie;
     private String raza;
-    private int edad;
+    private String edad;
     private String color;
     private String sexo;
 
@@ -51,11 +51,11 @@ public class paciente {
         this.raza = raza;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
