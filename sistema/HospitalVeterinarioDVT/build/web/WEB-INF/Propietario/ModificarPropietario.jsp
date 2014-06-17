@@ -1,3 +1,8 @@
+<%-- 
+    Document   : ModificarPropietario1
+    Created on : 
+    Author     : Jenny
+--%>
 <%@page import="Modelo.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,7 +13,7 @@
     </head>
     <body>
         <%
-            String[] datos = new String[5];
+            String[] datos = new String[4];
             Modelo.DAOpropietario propietario = new DAOpropietario();
             propietario.setDni(request.getParameter("dni"));
             if (!propietario.getDni().equals("")) {

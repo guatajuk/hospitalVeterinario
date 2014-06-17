@@ -1,11 +1,34 @@
+<%@page import="Modelo.DAOveterinario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+
+    <%
+        Modelo.DAOveterinario veterinario= new DAOveterinario();
+        veterinario.setCedula(request.getParameter("cedula"));
+        veterinario.setNombre(request.getParameter("nombre"));
+        veterinario.setEspecialidad(request.getParameter("especialidad"));     
+        if(!veterinario.getNombre().equals("") && !veterinario.getCedula().equals("") && !veterinario.getEspecialidad().equals("")){
+            if (veterinario.insertar()) {
+    %>
+                <script>
+                    alert("Veterinario insertado correctamente");
+                    var pag="frmInsertarVeterinario.jsp";
+                    window.location=pag;
+                </script>
+    <%            
+            } else {
+    %>
+                <script>
+                    alert("No se insertó");
+                    window.location="frmInsertarVeterinario.jsp";
+                </script>
+    <%      
+            }
+        } else {
+    %>
+            <script>
+                alert("Debe diligenciar todos los campos");
+                window.location="frmInsertarVeterinario.jsp";
+            </script>
+    <%    
+        }
+    %>
