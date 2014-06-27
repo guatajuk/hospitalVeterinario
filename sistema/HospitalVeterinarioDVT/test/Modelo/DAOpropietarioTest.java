@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Modelo;
 
 import org.junit.After;
@@ -19,22 +18,22 @@ import org.junit.Ignore;
  * @author giraldo
  */
 public class DAOpropietarioTest {
-    
+
     public DAOpropietarioTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -59,29 +58,28 @@ public class DAOpropietarioTest {
     /**
      * Test of modificar method, of class DAOpropietario.
      */
-    @Ignore
+    @Test
     public void testModificar() {
         System.out.println("modificar");
         DAOpropietario instance = new DAOpropietario();
-        boolean expResult = false;
+        instance.setNombre("Juan Gonzales modificado");
+        instance.setDni("23456789");
+        instance.setTelefono("8890124");
+        instance.setDireccion("CRA 20 # 85-23");
         boolean result = instance.modificar();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(result);
     }
 
     /**
      * Test of consultar method, of class DAOpropietario.
      */
-    @Ignore
+    @Test
     public void testConsultar() throws Exception {
         System.out.println("consultar");
         DAOpropietario instance = new DAOpropietario();
-        String[] expResult = null;
+        instance.setDni("23456789");
         String[] result = instance.consultar();
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertNotNull(result);
     }
 
     /**
@@ -97,5 +95,5 @@ public class DAOpropietarioTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }
