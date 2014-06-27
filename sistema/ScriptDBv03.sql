@@ -1,9 +1,9 @@
-﻿
+
 /* *************************************************************************** 	*/
 /*		BASE DE DATOS: HOSPITAL VETERINARIO UNIVERSIDAD DE CALDAS	*/
 /*		FECHA: JUNIO 11 - 2013						*/
 /*		VERSION: V0.3							*/
-/*		AUTOR: JUAN CASTAÑO						*/
+/*		AUTOR: JUAN CASTA�O						*/
 /* *************************************************************************** 	*/
 
 /*	ZONA DE CREACION DE BASE DE DATOS					*/
@@ -46,7 +46,7 @@ DROP TABLE Propietario;
 
 /*	TABLA PROPIETARIO 	*/
 
-CREATE TABLE IF NOT EXIST Propietario(
+CREATE TABLE IF NOT EXISTS Propietario(
 	codigo				SERIAL,
 	nombre				VARCHAR(50),
 	dni				VARCHAR(12) UNIQUE,
@@ -58,7 +58,7 @@ ALTER TABLE Propietario ADD PRIMARY KEY (codigo);
 
 /*	TABLA ESPECIE		*/
 
-CREATE TABLE IF NOT EXIST Especie(
+CREATE TABLE IF NOT EXISTS Especie(
 	codigo				SERIAL,
 	nombre				VARCHAR(50),
 	descripcion			TEXT
@@ -69,7 +69,7 @@ ALTER TABLE Especie ADD PRIMARY KEY (codigo);
 
 /*	TABLA RAZA 		*/
 
-CREATE TABLE IF NOT EXIST Raza(
+CREATE TABLE IF NOT EXISTS Raza(
 	codigo				SERIAL,
 	nombre 				VARCHAR(50),
 	descripcion			TEXT
@@ -80,7 +80,7 @@ ALTER TABLE Raza ADD PRIMARY KEY (codigo);
 
 /* 	TABLA PACIENTE 		*/
 
-CREATE TABLE IF NOT EXIST Paciente(
+CREATE TABLE IF NOT EXISTS Paciente(
 	codigo				SERIAL,
 	nombre				VARCHAR(50),
 	especie				INT,
@@ -99,7 +99,7 @@ ALTER TABLE Paciente ADD PRIMARY KEY (codigo),
 
 /* 	TABLA  TIPO DIETA 	*/
 
-CREATE TABLE IF NOT EXIST TipoDieta(
+CREATE TABLE IF NOT EXISTS TipoDieta(
 	codigo			SERIAL,
 	descripcion		TEXT
 );
@@ -109,7 +109,7 @@ ALTER TABLE TipoDieta ADD PRIMARY KEY (codigo);
 
 /* 	TABLA TIPO VACUNA 	*/
 
-CREATE TABLE IF NOT EXIST TipoVacuna(
+CREATE TABLE IF NOT EXISTS TipoVacuna(
 	codigo 			SERIAL,
 	descripcion		TEXT
 );
@@ -119,7 +119,7 @@ ALTER TABLE TipoVacuna ADD PRIMARY KEY (codigo);
 
 /* 	TABLA HISTORIAL VACUNA 	*/
 
-CREATE TABLE IF NOT EXIST HistorialVacunas(
+CREATE TABLE IF NOT EXISTS HistorialVacunas(
 	codigo					SERIAL,
 	codigoPaciente			INT,
 	fecha					DATE,
@@ -132,7 +132,7 @@ ALTER TABLE HistorialVacunas ADD FOREIGN KEY (codigoPaciente) REFERENCES Pacient
 
 /* 	TABLA VETERINARIO 	*/
 
-CREATE TABLE IF NOT EXIST Veterinario(
+CREATE TABLE IF NOT EXISTS Veterinario(
 	codigo					SERIAL,
 	cedula					VARCHAR(12),
 	nombre					VARCHAR(50),
@@ -144,7 +144,7 @@ ALTER TABLE Veterinario ADD PRIMARY KEY (codigo);
 
 /* 	TABLA HISTORIAL MEDICO 	*/
 
-CREATE TABLE IF NOT EXIST HistorialMedico(
+CREATE TABLE IF NOT EXISTS HistorialMedico(
 	codigo								SERIAL,
 	codigoPaciente						INT,
 	codigoVeterinario					INT,
