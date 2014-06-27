@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Ignore;
 
 /**
  *
@@ -45,21 +46,20 @@ public class DAOpropietarioTest {
     public void testInsertar() {
         System.out.println("insertar");
         DAOpropietario instance = new DAOpropietario();
-        instance.setNombre("Carlos Maturana");
-        instance.setDni("885");
-        instance.setTelefono("8860586");
-        instance.setDireccion("cll 95 #32-16");
-        boolean expResult = true;
+        instance.setNombre("Juan Gonzales");
+        instance.setDni("23456789");
+        instance.setTelefono("8890124");
+        instance.setDireccion("CRA 20 # 85-23");
         boolean result = instance.insertar();
-        assertEquals(expResult, result);
+        assertTrue(result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
     }
 
     /**
      * Test of modificar method, of class DAOpropietario.
      */
-    @Test
+    @Ignore
     public void testModificar() {
         System.out.println("modificar");
         DAOpropietario instance = new DAOpropietario();
@@ -73,7 +73,7 @@ public class DAOpropietarioTest {
     /**
      * Test of consultar method, of class DAOpropietario.
      */
-    @Test
+    @Ignore
     public void testConsultar() throws Exception {
         System.out.println("consultar");
         DAOpropietario instance = new DAOpropietario();
@@ -87,7 +87,7 @@ public class DAOpropietarioTest {
     /**
      * Test of verificar method, of class DAOpropietario.
      */
-    @Test
+    @Ignore
     public void testVerificar() {
         System.out.println("verificar");
         DAOpropietario instance = new DAOpropietario();
