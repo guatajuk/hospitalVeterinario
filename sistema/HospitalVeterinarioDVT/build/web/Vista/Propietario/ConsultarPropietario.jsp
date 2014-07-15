@@ -12,7 +12,7 @@
             String dni=request.getParameter("dni");
             Modelo.DAOpropietario propietario = new DAOpropietario();
             if(!dni.equals("")){
-               propietario.setDni(dni);
+               propietario.getPropietario().setDni(dni);
                     if ((datos = propietario.consultar())!= null) {
                     out.println("<form>");
                     out.println("<label>Nombre:</label><br><input type=text  readonly  name=nombre value=\"" + datos[1].toString() + "\"><br>");

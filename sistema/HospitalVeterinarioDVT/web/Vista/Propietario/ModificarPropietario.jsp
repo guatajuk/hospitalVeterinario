@@ -15,8 +15,8 @@
         <%
             String[] datos = new String[4];
             Modelo.DAOpropietario propietario = new DAOpropietario();
-            propietario.setDni(request.getParameter("dni"));
-            if (!propietario.getDni().equals("")) {
+            propietario.getPropietario().setDni(request.getParameter("dni"));
+            if (!propietario.getPropietario().getDni().equals("")) {
                 if (propietario.consultar() != null) {
                     datos = propietario.consultar();
                     out.println("<form  action=ModificarPropietario1.jsp>");

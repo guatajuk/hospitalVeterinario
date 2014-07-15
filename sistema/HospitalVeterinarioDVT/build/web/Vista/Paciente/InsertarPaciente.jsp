@@ -3,14 +3,14 @@
 
     <%
         Modelo.DAOpaciente paciente= new DAOpaciente();
-        paciente.setPropietario(request.getParameter("dni"));
-        paciente.setNombre(request.getParameter("nombre"));
-        paciente.setEspecie(request.getParameter("especie"));
-        paciente.setRaza(request.getParameter("raza"));
-        paciente.setEdad(request.getParameter("edad"));
-        paciente.setColor(request.getParameter("color"));
-        paciente.setSexo(request.getParameter("sexo"));
-        if(!paciente.getPropietario().equals("") && !paciente.getNombre().equals("") && !paciente.getEspecie().equals("") && !paciente.getRaza().equals("") && !paciente.getEdad().equals("") && !paciente.getColor().equals("") && !paciente.getSexo().equals("")){
+        paciente.getPaciente().setPropietario(request.getParameter("dni"));
+         paciente.getPaciente().setNombre(request.getParameter("nombre"));
+         paciente.getPaciente().setEspecie(request.getParameter("especie"));
+         paciente.getPaciente().setRaza(request.getParameter("raza"));
+         paciente.getPaciente().setEdad(request.getParameter("edad"));
+         paciente.getPaciente().setColor(request.getParameter("color"));
+         paciente.getPaciente().setSexo(request.getParameter("sexo"));
+        if(! paciente.getPaciente().getPropietario().equals("") && ! paciente.getPaciente().getNombre().equals("") && ! paciente.getPaciente().getEspecie().equals("") && ! paciente.getPaciente().getRaza().equals("") && ! paciente.getPaciente().getEdad().equals("") && ! paciente.getPaciente().getColor().equals("") && ! paciente.getPaciente().getSexo().equals("")){
             if (paciente.insertar()) {
     %>
                 <script>

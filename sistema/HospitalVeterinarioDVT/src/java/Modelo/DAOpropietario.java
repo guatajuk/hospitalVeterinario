@@ -4,13 +4,14 @@ import Controlador.Conexion;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DAOpropietario extends propietario {
+public class DAOpropietario {
 
     Controlador.Conexion c = new Conexion();
+    private propietario propietario= new propietario();
 
     public boolean insertar() {
         
-            String SQL = "INSERT  INTO propietario (nombre, dni, telefono, direccion) VALUES ('" + getNombre() + "', '" + getDni() + "', '" + getTelefono() + "', '" + getDireccion() + "')";
+            String SQL = "INSERT  INTO propietario (nombre, dni, telefono, direccion) VALUES ('" + getPropietario().getNombre() + "', '" + getPropietario().getDni() + "', '" + getPropietario().getTelefono() + "', '" + getPropietario().getDireccion() + "')";
             try {
                 c.procesarSQL(SQL);
                 return true;
@@ -23,7 +24,7 @@ public class DAOpropietario extends propietario {
     
     public String insertarm() {
         if (!verificar()) {
-            String SQL = "INSERT  INTO propietario (nombre, dni, telefono, direccion) VALUES ('" + getNombre() + "', '" + getDni() + "', '" + getTelefono() + "', '" + getDireccion() + "')";
+            String SQL = "INSERT  INTO propietario (nombre, dni, telefono, direccion) VALUES ('" + getPropietario().getNombre() + "', '" + getPropietario().getDni() + "', '" + getPropietario().getTelefono() + "', '" + getPropietario().getDireccion() + "')";
             try {
                 c.procesarSQL(SQL);
                 return "Insertado Correctamente";
@@ -38,7 +39,7 @@ public class DAOpropietario extends propietario {
     }
 
     public boolean modificar() {
-        String sql = "UPDATE propietario SET  nombre = '" + getNombre() + "', dni= '" + getDni() + "' , telefono='" + getTelefono() + "' , direccion='" + getDireccion() + "' where dni = '" + getDni() + "'";
+        String sql = "UPDATE propietario SET  nombre = '" + getPropietario().getNombre() + "', dni= '" + getPropietario().getDni() + "' , telefono='" + getPropietario().getTelefono() + "' , direccion='" + getPropietario().getDireccion() + "' where dni = '" + getPropietario().getDni() + "'";
         if (c.actualizar(sql) == 1) {
             return true;
         } else {
@@ -47,7 +48,7 @@ public class DAOpropietario extends propietario {
     }
 
     public String[] consultar() throws SQLException {
-        String sql = "SELECT * From propietario where dni=" + "'" + getDni() + "'";
+        String sql = "SELECT * From propietario where dni=" + "'" + getPropietario().getDni() + "'";
         String[] datos = new String[5];
         ResultSet r = c.consultar(sql);
         if (r.next()) {
@@ -61,10 +62,24 @@ public class DAOpropietario extends propietario {
     }
 
     public boolean verificar() {
-        String sql = "SELECT * From propietario where dni="+ "'" + getDni() + "'";
+        String sql = "SELECT * From propietario where dni="+ "'" + getPropietario().getDni() + "'";
         if (c.verificar(sql) == 1) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * @return the propietario
+     */
+    public propietario getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(propietario propietario) {
+        this.propietario = propietario;
     }
 }
