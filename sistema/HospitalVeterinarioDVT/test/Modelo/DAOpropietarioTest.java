@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editor
  */
 package Modelo;
 
@@ -45,10 +45,10 @@ public class DAOpropietarioTest {
     public void testInsertar() {
         System.out.println("insertar");
         DAOpropietario instance = new DAOpropietario();
-        instance.setNombre("Juan Gonzales");
-        instance.setDni("23456789");
-        instance.setTelefono("8890124");
-        instance.setDireccion("CRA 20 # 85-23");
+        instance.propietario.setNombre("Juan Gonzales");
+        instance.propietario.setDni("23456789");
+        instance.propietario.setTelefono("8890124");
+        instance.propietario.setDireccion("CRA 20 # 85-23");
         boolean result = instance.insertar();
         assertTrue(result);
         // TODO review the generated test code and remove the default call to fail.
@@ -62,10 +62,10 @@ public class DAOpropietarioTest {
     public void testModificar() {
         System.out.println("modificar");
         DAOpropietario instance = new DAOpropietario();
-        instance.setNombre("Juan Gonzales modificado");
-        instance.setDni("23456789");
-        instance.setTelefono("8890124");
-        instance.setDireccion("CRA 20 # 85-23");
+        instance.propietario.setNombre("Juan Gonzales modificado");
+        instance.propietario.setDni("23456789");
+        instance.propietario.setTelefono("8890124");
+        instance.propietario.setDireccion("CRA 20 # 85-23");
         boolean result = instance.modificar();
         assertTrue(result);
     }
@@ -77,7 +77,7 @@ public class DAOpropietarioTest {
     public void testConsultar() throws Exception {
         System.out.println("consultar");
         DAOpropietario instance = new DAOpropietario();
-        instance.setDni("23456789");
+        instance.propietario.setDni("23456789");
         String[] result = instance.consultar();
         assertNotNull(result);
     }

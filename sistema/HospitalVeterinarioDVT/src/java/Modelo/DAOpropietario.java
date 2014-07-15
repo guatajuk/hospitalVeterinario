@@ -4,10 +4,10 @@ import Controlador.Conexion;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DAOpropietario {
+public class DAOpropietario{
 
     Controlador.Conexion c = new Conexion();
-    private propietario propietario= new propietario();
+    protected propietario propietario= new propietario();
 
     public boolean insertar() {
         
