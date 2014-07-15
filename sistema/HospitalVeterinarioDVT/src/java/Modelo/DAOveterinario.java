@@ -4,12 +4,13 @@ import Controlador.Conexion;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DAOveterinario extends veterinario {
+public class DAOveterinario  {
 
     Controlador.Conexion c = new Conexion();
-
+    
+ private veterinario veterinario;
     public boolean insertar() {
-        String SQL = "INSERT  INTO veterinario (cedula, nombre, especialidad) VALUES ('"+getCedula()+"', '"+getNombre()+"', '"+getEspecialidad()+"')";
+        String SQL = "INSERT  INTO veterinario (cedula, nombre, especialidad) VALUES ('"+getVeterinario().getCedula()+"', '"+getVeterinario().getNombre()+"', '"+getVeterinario().getEspecialidad()+"')";
         try {
             c.procesarSQL(SQL);
             return true;
@@ -20,7 +21,7 @@ public class DAOveterinario extends veterinario {
     }
 
     public boolean modificar() {
-        String sql = "UPDATE veterinario SET cedula = '"+getCedula()+"', nombre= '"+getNombre()+"', especialidad = '"+getEspecialidad()+"' where cedula = '"+getCedula()+"'";
+        String sql = "UPDATE veterinario SET cedula = '"+getVeterinario().getCedula()+"', nombre= '"+getVeterinario().getNombre()+"', especialidad = '"+getVeterinario().getEspecialidad()+"' where cedula = '"+getVeterinario().getCedula()+"'";
         if (c.actualizar(sql) == 1) {
             return true;
         }
@@ -28,7 +29,7 @@ public class DAOveterinario extends veterinario {
     }
 
     public String[] consultar() throws SQLException {
-        String sql = "SELECT * From veterinario where cedula=" + "'" + getCedula() + "'";
+        String sql = "SELECT * From veterinario where cedula=" + "'" + getVeterinario().getCedula() + "'";
         String[] datos = new String[4];
         ResultSet r = c.consultar(sql);
         if (r.next()) {
@@ -43,11 +44,18 @@ public class DAOveterinario extends veterinario {
     }
 
     public boolean verificar() {
-        String sql = "SELECT * FROM propietario WHERE cedula = "+getCedula()+"";
+        String sql = "SELECT * FROM propietario WHERE cedula = "+getVeterinario().getCedula()+"";
         if (c.verificar(sql) == 1) {
             return true;
         }
         return false;
     }  
+
+    /**
+     * @return the veterinario
+     */
+    public veterinario getVeterinario() {
+        return veterinario;
+    }
 }
 
