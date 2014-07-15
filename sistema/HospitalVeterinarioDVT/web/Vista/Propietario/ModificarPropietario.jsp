@@ -3,7 +3,7 @@
     Created on : 
     Author     : Jenny
 --%>
-<%@page import="Modelo.DAOpropietario"%>
+<%@page import="Controlador.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
     <body>
         <%
             String[] datos = new String[4];
-            Modelo.DAOpropietario propietario = new DAOpropietario();
+            Controlador.DAOpropietario propietario = new DAOpropietario();
             propietario.getPropietario().setDni(request.getParameter("dni"));
             if (!propietario.getPropietario().getDni().equals("")) {
                 if (propietario.consultar() != null) {

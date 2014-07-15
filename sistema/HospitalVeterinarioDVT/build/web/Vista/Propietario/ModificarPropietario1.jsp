@@ -4,11 +4,11 @@
     Author     : Jenny
 --%>
 
-<%@page import="Modelo.DAOpropietario"%>
+<%@page import="Controlador.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    Modelo.DAOpropietario propietario=new DAOpropietario();
+    Controlador.DAOpropietario propietario=new DAOpropietario();
     propietario.getPropietario().setDni(request.getParameter("dni"));
     propietario.getPropietario().setNombre(request.getParameter("nombre"));
     propietario.getPropietario().setDireccion(request.getParameter("direccion"));

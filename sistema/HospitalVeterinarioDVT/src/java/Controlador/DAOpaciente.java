@@ -1,5 +1,6 @@
-package Modelo;
+package Controlador;
 import Controlador.Conexion;
+import Modelo.paciente;
 import java.sql.SQLException;
 
 public class DAOpaciente  {

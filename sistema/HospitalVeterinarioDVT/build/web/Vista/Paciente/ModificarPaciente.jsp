@@ -1,8 +1,8 @@
-<%@page import="Modelo.DAOpaciente"%>    
+<%@page import="Controlador.DAOpaciente"%>    
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    Modelo.DAOpaciente paciente = new DAOpaciente();
+    Controlador.DAOpaciente paciente = new DAOpaciente();
      paciente.getPaciente().setPropietario(request.getParameter("codigo"));
      paciente.getPaciente().setPropietario(request.getParameter("propietario"));
      paciente.getPaciente().setNombre(request.getParameter("nombre"));

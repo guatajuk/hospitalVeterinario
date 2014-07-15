@@ -1,8 +1,8 @@
-<%@page import="Modelo.DAOveterinario"%>
+<%@page import="Controlador.DAOveterinario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
     <%
-        Modelo.DAOveterinario veterinario= new DAOveterinario();
+        Controlador.DAOveterinario veterinario= new DAOveterinario();
         veterinario.getVeterinario().setCedula(request.getParameter("cedula"));
         veterinario.getVeterinario().setNombre(request.getParameter("nombre"));
         veterinario.getVeterinario().setEspecialidad(request.getParameter("especialidad"));     

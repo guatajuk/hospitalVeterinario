@@ -1,4 +1,4 @@
-<%@page import="Modelo.DAOpropietario"%>
+<%@page import="Controlador.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
         <%
             String[] datos = new String[5];
             String dni=request.getParameter("dni");
-            Modelo.DAOpropietario propietario = new DAOpropietario();
+            Controlador..DAOpropietario propietario = new DAOpropietario();
             if(!dni.equals("")){
                propietario.getPropietario().setDni(dni);
                     if ((datos = propietario.consultar())!= null) {

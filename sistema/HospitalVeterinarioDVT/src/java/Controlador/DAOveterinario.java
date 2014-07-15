@@ -1,6 +1,7 @@
-package Modelo;
+package Controlador;
 
 import Controlador.Conexion;
+import Modelo.veterinario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
