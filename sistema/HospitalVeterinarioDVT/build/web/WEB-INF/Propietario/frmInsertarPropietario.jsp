@@ -9,7 +9,7 @@
         <form  action=InsertarPropietario.jsp>
             
             <label>Nombre:</label><br><input type="text" required name="nombre"><br>
-            <label>Dni:</label><br><input type="text" required name="dni"><br>
+            <label>Cédula:</label><br><input type="text" required name="dni"><br>
             <label>Teléfono:</label><br><input type="text"   required name="telefono"><br>
              <label>Direccion:</label><br><input type="text"  required name="direccion"><br>
 

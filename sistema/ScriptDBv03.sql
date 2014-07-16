@@ -89,12 +89,12 @@ CREATE TABLE IF NOT EXISTS Paciente(
 	edad				CHAR(2),
 	color				VARCHAR(10),
 	procedencia			VARCHAR(20),
-	codigoPropietario		INT
+	codigoPropietario		VARCHAR(12) 
 );
 
 ALTER TABLE Paciente ADD PRIMARY KEY (codigo), 
 			ADD FOREIGN KEY (especie) REFERENCES Especie (codigo),
-			ADD FOREIGN KEY (codigoPropietario) REFERENCES Propietario (codigo);
+			ADD FOREIGN KEY (codigoPropietario) REFERENCES Propietario (dni);
 
 
 /* 	TABLA  TIPO DIETA 	*/

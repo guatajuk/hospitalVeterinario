@@ -8,6 +8,7 @@ public class paciente {
     private String especie;
     private String raza;
     private String edad;
+    private String procedencia;
     private String color;
     private String sexo;
 
@@ -73,5 +74,19 @@ public class paciente {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    /**
+     * @return the procedencia
+     */
+    public String getProcedencia() {
+        return procedencia;
+    }
+
+    /**
+     * @param procedencia the procedencia to set
+     */
+    public void setProcedencia(String procedencia) {
+        this.procedencia = procedencia;
     }
 }
