@@ -1,13 +1,13 @@
 package Controlador;
 
-import Controlador.Conexion;
+import Utilidades.Conexion;
 import Modelo.propietario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DAOpropietario{
 
-    Controlador.Conexion c = new Conexion();
+    Utilidades.Conexion c = new Conexion();
     protected propietario propietario= new propietario();
 
     public boolean insertar() {
@@ -48,15 +48,16 @@ public class DAOpropietario{
         }
     }
 
-    public String[] consultar() throws SQLException {
-        String sql = "SELECT * From propietario where dni=" + "'" + getPropietario().getDni() + "'";
-        String[] datos = new String[5];
+    public propietario consultar() throws SQLException {
+        String sql = "SELECT * From propietario where dni="+ "'" + getPropietario().getDni() + "'";
+        propietario p= new propietario();
         ResultSet r = c.consultar(sql);
         if (r.next()) {
-            for (int i = 1; i < 6; i++) {
-                datos[i - 1] = (r.getString(i));
-            }
-            return datos;
+           p.setNombre(r.getString(2));
+           p.setDni(r.getString(3));
+           p.setTelefono(r.getString(4));
+           p.setDireccion(r.getString(5));
+            return p;
         } else {
             return null;
         }
@@ -65,6 +66,7 @@ public class DAOpropietario{
     public boolean verificar() {
         String sql = "SELECT * From propietario where dni="+ "'" + getPropietario().getDni() + "'";
         if (c.verificar(sql) == 1) {
+            System.out.println("exite informacionnnnnnnnnnnnnnnnnnnnnnnnnn");
             return true;
         }
         return false;

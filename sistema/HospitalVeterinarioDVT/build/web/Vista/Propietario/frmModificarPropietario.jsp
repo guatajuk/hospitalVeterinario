@@ -12,7 +12,7 @@
     </head>
     <body>
        <form  action="ModificarPropietario.jsp">
-        <label>Dni:</label><br><input type="text" required name="dni"><br>
+        <label>Cédula:</label><br><input type="text" required name="dni"><br>
         <input class="" type="submit"  value="Consultar" >
         <div><a href="../../menu.html">Volver al Menu</a></div>
           </form>

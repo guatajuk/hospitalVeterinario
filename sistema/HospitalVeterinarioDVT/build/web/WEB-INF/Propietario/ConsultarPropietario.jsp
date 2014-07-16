@@ -1,4 +1,5 @@
-<%@page import="Modelo.DAOpropietario"%>
+<%@page import="Modelo.propietario"%>
+<%@page import="Controlador.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,21 +9,15 @@
     </head>
     <body>
         <%
-            String[] datos = new String[5];
             String dni=request.getParameter("dni");
-            Modelo.DAOpropietario propietario = new DAOpropietario();
-            if(!dni.equals("")){
-               propietario.setDni(dni);
-                    if ((datos = propietario.consultar())!= null) {
-                    out.println("<form>");
-                    out.println("<label>Nombre:</label><br><input type=text  readonly  name=nombre value=\"" + datos[1].toString() + "\"><br>");
-                    out.println("<label>Dni:</label><br><input type=text  readonly  name=dni value=\"" + datos[2].toString() + "\"><br>");
-                    out.println("<label>Teléfono:</label><br><input type=text readonly   name=telefono value=\"" + datos[3].toString() + "\"><br>");
-                    out.println("<label>Direccion:</label><br><input type=text readonly  name=direccion value=\"" + datos[4].toString() + "\"><br>");
-                    out.println("</form>");
-                    out.println("<div><a href=\"../../menu.html\">Volver al Menu</a></div>");
-               
-
+             if(!dni.equals("")){
+               Controlador.DAOpropietario propietario = new DAOpropietario();
+               propietario.getPropietario().setDni(dni);
+               propietario r=propietario.consultar();
+                    if (r!= null) {
+                    String form="<form><label>Nombre:</label><br><input type=text  readonly  name=nombre value=\"" + r.getNombre() + "\"><br><label>Dni:</label><br><input type=text  readonly  name=dni value=\"" +  r.getDni() + "\"><br><label>Teléfono:</label><br><input type=text readonly   name=telefono value=\"" + r.getTelefono() + "\"><br><label>Direccion:</label><br><input type=text readonly  name=direccion value=\"" +  r.getDireccion() + "\"><br></form><div><a href=\"../../menu.html\">Volver al Menu</a></div>";
+                     request.setAttribute("form", form);
+                     request.getRequestDispatcher("MostrarConsulta.jsp").forward(request, response);
                 }
                 else{
           %>

@@ -1,12 +1,12 @@
-<%@page import="Modelo.DAOveterinario"%>
+<%@page import="Controlador.DAOveterinario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
     <%
-        Modelo.DAOveterinario veterinario= new DAOveterinario();
-        veterinario.setCedula(request.getParameter("cedula"));
-        veterinario.setNombre(request.getParameter("nombre"));
-        veterinario.setEspecialidad(request.getParameter("especialidad"));     
-        if(!veterinario.getNombre().equals("") && !veterinario.getCedula().equals("") && !veterinario.getEspecialidad().equals("")){
+        Controlador.DAOveterinario veterinario= new DAOveterinario();
+        veterinario.getVeterinario().setCedula(request.getParameter("cedula"));
+        veterinario.getVeterinario().setNombre(request.getParameter("nombre"));
+        veterinario.getVeterinario().setEspecialidad(request.getParameter("especialidad"));     
+        if(!veterinario.getVeterinario().getNombre().equals("") && !veterinario.getVeterinario().getCedula().equals("") && !veterinario.getVeterinario().getEspecialidad().equals("")){
             if (veterinario.insertar()) {
     %>
                 <script>
