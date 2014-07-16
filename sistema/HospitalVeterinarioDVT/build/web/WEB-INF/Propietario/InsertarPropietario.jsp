@@ -3,16 +3,16 @@
     Created on : 
     Author     : Jenny
 --%>
-<%@page import="Modelo.DAOpropietario"%>
+<%@page import="Controlador.DAOpropietario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    Modelo.DAOpropietario propietario=new DAOpropietario();
-    propietario.setDni(request.getParameter("dni"));
-    propietario.setNombre(request.getParameter("nombre"));
-    propietario.setDireccion(request.getParameter("direccion"));
-    propietario.setTelefono(request.getParameter("telefono"));
-    if(!propietario.getDni().equals("")&&! propietario.getDireccion().equals("")&&!propietario.getNombre().equals("")&&!propietario.getTelefono().equals("")){
+    Controlador.DAOpropietario propietario=new DAOpropietario();
+    propietario.getPropietario().setDni(request.getParameter("dni"));
+    propietario.getPropietario().setNombre(request.getParameter("nombre"));
+    propietario.getPropietario().setDireccion(request.getParameter("direccion"));
+    propietario.getPropietario().setTelefono(request.getParameter("telefono"));
+    if(!propietario.getPropietario().getDni().equals("")&&! propietario.getPropietario().getDireccion().equals("")&&!propietario.getPropietario().getNombre().equals("")&&!propietario.getPropietario().getTelefono().equals("")){
         if (propietario.insertar()) {
 %>
             <script>

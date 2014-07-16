@@ -1,13 +1,13 @@
 package Controlador;
 
-import Controlador.Conexion;
+import Utilidades.Conexion;
 import Modelo.veterinario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DAOveterinario  {
 
-    Controlador.Conexion c = new Conexion();
+    Utilidades.Conexion c = new Conexion();
     
  private veterinario veterinario;
     public boolean insertar() {

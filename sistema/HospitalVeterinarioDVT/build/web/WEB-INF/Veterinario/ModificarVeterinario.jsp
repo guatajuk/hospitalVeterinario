@@ -1,4 +1,4 @@
-<%@page import="Modelo.DAOveterinario"%>
+<%@page import="Controlador.DAOveterinario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@
     <body>
         <%
             String[] datos = new String[3];
-            Modelo.DAOveterinario veterinario = new DAOveterinario();
+            Controlador.DAOveterinario veterinario = new DAOveterinario();
             veterinario.setCedula(request.getParameter("cedula"));
             if (!veterinario.getCedula().equals("")) {
                 if (veterinario.consultar() != null) {

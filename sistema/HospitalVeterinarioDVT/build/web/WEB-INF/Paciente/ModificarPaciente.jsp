@@ -1,15 +1,15 @@
-<%@page import="Modelo.DAOpaciente"%>    
+<%@page import="Controlador.DAOpaciente"%>    
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    Modelo.DAOpaciente paciente = new DAOpaciente();
-    paciente.setPropietario(request.getParameter("codigo"));
-    paciente.setPropietario(request.getParameter("propietario"));
-    paciente.setNombre(request.getParameter("nombre"));
-    paciente.setRaza(request.getParameter("raza"));
-    paciente.setEspecie(request.getParameter("especie"));
-    paciente.setColor(request.getParameter("color"));
-    paciente.setEdad(Integer.valueOf(request.getParameter("edad")));
+    Controlador.DAOpaciente paciente = new DAOpaciente();
+     paciente.getPaciente().setPropietario(request.getParameter("codigo"));
+     paciente.getPaciente().setPropietario(request.getParameter("propietario"));
+     paciente.getPaciente().setNombre(request.getParameter("nombre"));
+     paciente.getPaciente().setRaza(request.getParameter("raza"));
+     paciente.getPaciente().setEspecie(request.getParameter("especie"));
+     paciente.getPaciente().setColor(request.getParameter("color"));
+    paciente.getPaciente().setEdad(Integer.valueOf(request.getParameter("edad")));
     if (!paciente.verificar()) {
         paciente.modificar();
 %>

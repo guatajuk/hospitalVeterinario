@@ -1,12 +1,12 @@
 package Controlador;
-import Controlador.Conexion;
+import Utilidades.Conexion;
 import Modelo.paciente;
 import java.sql.SQLException;
 
 public class DAOpaciente  {
     private paciente paciente;
 
-    Controlador.Conexion c = new Conexion();
+   Utilidades.Conexion c = new Conexion();
 
     public boolean insertar(){
         String SQL = "INSERT INTO paciente (dni, nombre, especie, raza, edad, sexo, color) VALUES ('"+getPaciente().getPropietario()+"', '"+getPaciente().getNombre()+"', '"+getPaciente().getEspecie()+"', '"+getPaciente().getRaza()+"', '"+getPaciente().getEdad()+"', '"+getPaciente().getSexo()+"', '"+getPaciente().getColor()+"')";
