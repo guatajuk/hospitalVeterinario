@@ -6,7 +6,7 @@
         <title>Modificar Paciente</title>
     </head>
     <body>
-        <form action="ConsultarPaciente.jsp">
+        <form action="ModificarPaciente.jsp">
             <label>Codigo:</label> <br><input type="text" name="codigo"><br>
             <input class="" type="submit" value="Modificar">
         </form>

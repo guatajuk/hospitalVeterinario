@@ -17,7 +17,7 @@
                     if (r!= null) {
                     String form="<form><label>Nombre:</label><br><input type=text  readonly  name=nombre value=\"" + r.getNombre() + "\"><br><label>Dni:</label><br><input type=text  readonly  name=dni value=\"" +  r.getDni() + "\"><br><label>Teléfono:</label><br><input type=text readonly   name=telefono value=\"" + r.getTelefono() + "\"><br><label>Direccion:</label><br><input type=text readonly  name=direccion value=\"" +  r.getDireccion() + "\"><br></form><div><a href=\"../../menu.html\">Volver al Menu</a></div>";
                      request.setAttribute("form", form);
-                     request.getRequestDispatcher("MostrarConsulta.jsp").forward(request, response);
+                     request.getRequestDispatcher("MostrarConsultaPropietario.jsp").forward(request, response);
                 }
                 else{
           %>

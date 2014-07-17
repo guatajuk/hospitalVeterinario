@@ -15,12 +15,11 @@
     <body>
         <%
             Controlador.DAOpropietario propietario = new DAOpropietario();
-            propietario.getPropietario().setDni(request.getParameter("dni"));
+            propietario.getPropietario().setDni(request.getParameter("cedula"));
             if (!propietario.getPropietario().getDni().equals("")) {
-
                 propietario p = propietario.consultar();
                 if (p!= null) {
-                    String form = "<form  action=ModificarPropietario1.jsp><label>Nombre:</label><br><input type=text required name=nombre value=\"" + p.getNombre() + "\"><br><label>Cédula:</label><br><input type=text required name=dni value=\"" + p.getDni() + "\"><br><label>Teléfono:</label><br><input type=text   required name=telefono value=\"" + p.getTelefono() + "\"><br><label>Direccion:</label><br><input type=text  required name=direccion value=\"" + p.getDireccion() + "\"><br><input  type=submit  value=Modificar ></form><div><a href=\"../../menu.html\">Volver al Menu</a></div>";
+                    String form = "<form  action=ModificarPropietario1.jsp><label>Nombre:</label><br><input type=text required name=nombre value=\"" + p.getNombre() + "\"><br><label>Cédula:</label><br><input type=text readonly name=cedula value=\"" + p.getDni() + "\"><br><label>Teléfono:</label><br><input type=text   required name=telefono value=\"" + p.getTelefono() + "\"><br><label>Direccion:</label><br><input type=text  required name=direccion value=\"" + p.getDireccion() + "\"><br><input  type=submit  value=Modificar ></form><div><a href=\"../../menu.html\">Volver al Menu</a></div>";
                     request.setAttribute("form", form);
                     request.getRequestDispatcher("MostrarConsultaModifica.jsp").forward(request, response);
                 } else {

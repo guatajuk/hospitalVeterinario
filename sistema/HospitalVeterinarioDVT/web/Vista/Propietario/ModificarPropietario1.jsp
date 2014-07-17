@@ -9,7 +9,7 @@
 
 <%
     Controlador.DAOpropietario propietario=new DAOpropietario();
-    propietario.getPropietario().setDni(request.getParameter("dni"));
+    propietario.getPropietario().setDni(request.getParameter("cedula"));
     propietario.getPropietario().setNombre(request.getParameter("nombre"));
     propietario.getPropietario().setDireccion(request.getParameter("direccion"));
     propietario.getPropietario().setTelefono(request.getParameter("telefono"));

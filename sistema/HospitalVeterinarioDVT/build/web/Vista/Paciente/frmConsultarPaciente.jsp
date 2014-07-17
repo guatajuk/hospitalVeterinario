@@ -9,7 +9,7 @@
         <form action="ConsultarPaciente.jsp">
             <label>Codigo:</label>
             <br>
-            <input type="text" name="Codigo"><br>
+            <input type="text" name="codigo"><br>
             <input class="" type="submit" value="Consultar">
         </form>
     </body>

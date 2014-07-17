@@ -21,7 +21,7 @@ $(document).ready(function() {
         success: function(data) {
             //our country code was correct so we have some information to display
 
-            $("#especie").html(data);
+            $("#divespecie").html(data);
         }
 
 

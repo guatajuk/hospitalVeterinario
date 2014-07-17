@@ -5,7 +5,7 @@ public class paciente {
     private String codigo;
     private String propietario;
     private String nombre;
-    private String especie;
+    private int especie;
     private String raza;
     private String edad;
     private String procedencia;
@@ -36,11 +36,11 @@ public class paciente {
         this.nombre = nombre;
     }
 
-    public String getEspecie() {
+    public int getEspecie() {
         return especie;
     }
 
-    public void setEspecie(String especie) {
+    public void setEspecie(int especie) {
         this.especie = especie;
     }
 
