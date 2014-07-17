@@ -5,7 +5,10 @@
         <link rel="stylesheet" type="text/css" href="../../css/formularios.css">
         <link rel="stylesheet" type="text/css" href="../../css/menu.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="../../js/jquery-ui.js"></script>
+        <script src="../../js/jquery-1.10.2.js"></script>
         <script src="../../js/utilidades.js"></script>
+        
         <title>Insertar Paciente</title>
     </head>
     <body>
@@ -44,26 +47,30 @@
         <br>
         <br>
         <div id="wrapper">
-             <form  action=InsertarPaciente.jsp>
+            <form  action=InsertarPaciente.jsp>
+                <fieldset>
+                    <legend>Insertar Paciente</legend>
+                    <div><input type="text" required name="nombre" placeholder="Nombre"></div>
+                    <div id="divespecie" name="divespecie"></div>
+                    <br>
+                    <div><input type="text" required name="raza" placeholder="Raza"></div>
+                    <div><select type="text" required name="sexo"><option value="M">Macho</option><option value="H">Hembra</option></select></div>
+                    <br>
+                    <div><input type="text" required name="edad" placeholder="Edad"></div>
+                    <div><input type="text" required name="color" placeholder="Color"></div>
+                    <div><input type="text" required name="procedencia" placeholder=Procedencia""></div>
+                    <div><input type="text" required name="propietario" placeholder="Propietario"></div>
+                    <input class="" type="submit"  value="Insertar" name="submit" >
+                </fieldset>
 
-            <label>Nombre:</label><br><input type="text" required name="nombre"><br>
-            <label>Especie:</label><div id="divespecie" name="divespecie"></div><br>
-            <label>Raza:</label><br><input type="text" required name="raza"><br>
-            <label>Sexo:</label><br><select type="text" required name="sexo"><option value="M">Macho</option><option value="H">Hembra</option></select><br>
-            <label>Edad:</label><br><input type="text" required name="edad"><br>
-            <label>Color:</label><br><input type="text" required name="color"><br>
-            <label>Procedencia:</label><br><input type="text" required name="procedencia"><br>
-            <label>Cédula Propietario:</label><br><input type="text" required name="propietario"><br>
-            <input class="" type="submit"  value="Insertar" >
-
-        </form>
+            </form>
 
         </div>
         <div id="animales">
-            <img src="../../animales.png" alt="ad">
+            <img src="../../Imagenes/animales.png" alt="ad">
         </div>
         <div id="logo">
-            <img src="../../ucaldas1.png"> 
+            <img src="../../Imagenes/ucaldas1.png"> 
         </div>
     </body>
 </html>

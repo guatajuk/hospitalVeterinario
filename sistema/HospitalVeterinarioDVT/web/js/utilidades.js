@@ -15,12 +15,9 @@ $(document).ready(function() {
     $.ajax({
         type: "GET",
         url: r,
-//        data: dataString,
-//        dataType: "json",
-        //if received a response from the server
-        success: function(data) {
-            //our country code was correct so we have some information to display
 
+        success: function(data) {
+            
             $("#divespecie").html(data);
         }
 

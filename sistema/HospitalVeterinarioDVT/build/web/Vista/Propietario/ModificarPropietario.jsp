@@ -13,13 +13,14 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <%
             Controlador.DAOpropietario propietario = new DAOpropietario();
             propietario.getPropietario().setDni(request.getParameter("cedula"));
             if (!propietario.getPropietario().getDni().equals("")) {
                 propietario p = propietario.consultar();
                 if (p!= null) {
-                    String form = "<form  action=ModificarPropietario1.jsp><label>Nombre:</label><br><input type=text required name=nombre value=\"" + p.getNombre() + "\"><br><label>Cédula:</label><br><input type=text readonly name=cedula value=\"" + p.getDni() + "\"><br><label>Teléfono:</label><br><input type=text   required name=telefono value=\"" + p.getTelefono() + "\"><br><label>Direccion:</label><br><input type=text  required name=direccion value=\"" + p.getDireccion() + "\"><br><input  type=submit  value=Modificar ></form><div><a href=\"../../menu.html\">Volver al Menu</a></div>";
+                    String form = "<div id=wrapper><form  action=ModificarPropietario1.jsp><fieldset><legend>Modifica Propietario</legend><div><input type=text required name=nombre value=\"" + p.getNombre() + "\" placeholder=Nombre></div><div><input type=text readonly name=cedula value=\"" + p.getDni() + "\" placeholder=Cedula></div><div><input type=text   required name=telefono value=\"" + p.getTelefono() + "\" placeholder=Telefono></div><div><input type=text  required name=direccion value=\"" + p.getDireccion() + "\" placeholder=Direccion></div><input  type=submit  value=Modificar name=submit></fieldset></form></div>";
                     request.setAttribute("form", form);
                     request.getRequestDispatcher("MostrarConsultaModifica.jsp").forward(request, response);
                 } else {

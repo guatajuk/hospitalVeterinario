@@ -15,7 +15,7 @@
                propietario.getPropietario().setDni(dni);
                propietario r=propietario.consultar();
                     if (r!= null) {
-                    String form="<form><label>Nombre:</label><br><input type=text  readonly  name=nombre value=\"" + r.getNombre() + "\"><br><label>Dni:</label><br><input type=text  readonly  name=dni value=\"" +  r.getDni() + "\"><br><label>Teléfono:</label><br><input type=text readonly   name=telefono value=\"" + r.getTelefono() + "\"><br><label>Direccion:</label><br><input type=text readonly  name=direccion value=\"" +  r.getDireccion() + "\"><br></form><div><a href=\"../../menu.html\">Volver al Menu</a></div>";
+                    String form="<div id=wrapper><form><fieldset><legend>Consultae Propietario</legend><div><input type=text  readonly  name=nombre value=\"" + r.getNombre() + "\"></div><div><input type=text  readonly  name=dni value=\"" +  r.getDni() + "\"></div><div><input type=text readonly   name=telefono value=\"" + r.getTelefono() + "\"></div><div><input type=text readonly  name=direccion value=\"" +  r.getDireccion() + "\"></div></fieldset></form></div>";
                      request.setAttribute("form", form);
                      request.getRequestDispatcher("MostrarConsultaPropietario.jsp").forward(request, response);
                 }
