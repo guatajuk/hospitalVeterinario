@@ -8,13 +8,13 @@ import java.sql.Statement;
 
 public class Conexion {
     
-    ResultSet res = null;
+    private ResultSet res = null;
     private Connection con = null;
-    Statement st = null;
-    String driver = "org.postgresql.Driver";
-    String url = "jdbc:postgresql://127.0.0.1:5432/HISTORIAL_VETERINARIO";
-    String userDB = "postgres";
-    String passDB = "admin";
+    private Statement st = null;
+    private String driver = "org.postgresql.Driver";
+    private String url = "jdbc:postgresql://127.0.0.1:5432/HISTORIAL_VETERINARIO";
+    private String userDB = "postgres";
+    private String passDB = "admin";
 
     public Conexion() {
         conectar();
