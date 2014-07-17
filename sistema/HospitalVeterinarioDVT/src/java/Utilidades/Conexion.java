@@ -12,9 +12,9 @@ public class Conexion {
     private Connection con = null;
     Statement st = null;
     String driver = "org.postgresql.Driver";
-    String url = "jdbc:postgresql://127.0.0.1:5432/software";
+    String url = "jdbc:postgresql://127.0.0.1:5432/HISTORIAL_VETERINARIO";
     String userDB = "postgres";
-    String passDB = "smile";
+    String passDB = "admin";
 
     public Conexion() {
         conectar();
