@@ -1,2 +1,8 @@
 #Archivos binarios de Java
 *.class
+
+#Configuraciones locales de NetBeans
+private.properties
+
+#OS X
+.DS_Store
