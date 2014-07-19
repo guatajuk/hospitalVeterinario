@@ -2,7 +2,9 @@
 *.class
 
 #Configuraciones locales de NetBeans
-private.properties
+sistema/HospitalVeterinarioDVT/nbproject/ant-deploy.xml
+sistema/HospitalVeterinarioDVT/nbproject/private/private.xml
+sistema/HospitalVeterinarioDVT/nbproject/project.properties
 
 #OS X
 .DS_Store
